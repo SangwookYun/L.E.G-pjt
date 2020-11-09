@@ -1,0 +1,29 @@
+.hotdeal {
+    width:300px;
+    height:300px;
+    margin:auto;
+    border:1px solid #eee;
+    box-shadow:0 2px 3px #ccc;  
+    /* text-align:center; */
+    margin-top:10px;
+    margin-bottom:50px;
+    margin-left:20px;
+    margin-right:10px;
+    display:inline-block;
+}
+.img_hotdeal {
+    width:100%;
+    height:80%;
+    background-image: url('../Pic/hotdeal1.jpg');
+    background-size: 100%;
+}
+.res_name_hotdeal {
+    color:#ff8500;
+    margin-left: 10px;
+    font-size: 23px;
+    margin-bottom:0px;
+}
+.res_content_hotdeal {
+    margin-left: 10px;
+    font-size: 13px;
+}

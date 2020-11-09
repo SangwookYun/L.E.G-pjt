@@ -1,25 +1,35 @@
 import logo from './logo.svg';
+import React, {Component} from 'react'
 import './App.css';
+import {Container, Row, Col} from 'react-bootstrap'
+import {Route, BrowserRouter as Router, Link, Switch} from 'react-router-dom'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Nav from './Navigation/Nav'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchAppBar from './Navigation/SearchAppBar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+
+
+  render() {
+    return (
+      <Router>
+        <div >
+            <Nav></Nav>
+            {/* <SearchAppBar></SearchAppBar> */}
+            <Switch>
+              <Route path = "/" exact component = {Home} />
+              <Route path = "/about" component = {About} />
+            </Switch>
+          </div>
+      </Router>
+      
+    );
+  }
+  
 }
 
 export default App;
