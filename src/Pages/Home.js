@@ -23,7 +23,7 @@ class Home extends Component {
                     <Col className ="header_home"> Hot deal</Col>
                 </Row>
                 <Row>
-                    <Col xl={{span:10, offset:2}}>
+                 <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
                         <Hotdeal name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
                         <Hotdeal name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
                         <Hotdeal name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
@@ -31,7 +31,7 @@ class Home extends Component {
                 </Row>
                 <Row className = "row_topreview">
                     <Col className ="header2_home"> Top Review</Col>
-                    <Col xl={{span:10, offset:2}}>
+                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
                         <Topreview name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Topreview>
                         <Topreview name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Topreview>
                         <Topreview name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Topreview>
@@ -39,19 +39,19 @@ class Home extends Component {
                 </Row>
                 <Row className = "row_sort_food">    
                     <Col className ="header_home"> Sort of Food</Col>
-                    <Col xl={{span:10, offset : 2}}>
+                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
                         <SortBtn bgImage ={Burger}></SortBtn>
                         <SortBtn bgImage ={Cafe}></SortBtn>
                         <SortBtn bgImage ={Chicken}></SortBtn>
  
                     </Col>
-                    <Col xl={{span:10, offset : 2}}>
+                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
                         <SortBtn bgImage ={Italian}></SortBtn>
                         <SortBtn bgImage ={Japanese}></SortBtn>
                         <SortBtn bgImage ={Korean}></SortBtn>
                         
                     </Col>
-                    <Col xl={{span:10, offset : 2}}>
+                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
                         <SortBtn bgImage ={Pizza}></SortBtn>
                         <SortBtn bgImage ={Chinese}></SortBtn>
                         <SortBtn bgImage ={Vietnam}></SortBtn>
