@@ -6,6 +6,7 @@ import {Route, BrowserRouter as Router, Link, Switch} from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Nav from './Navigation/Nav'
+import Footer from './Modules/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchAppBar from './Navigation/SearchAppBar'
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Route path = "/" exact component = {Home} />
               <Route path = "/about" component = {About} />
             </Switch>
+            <Footer></Footer>
           </div>
       </Router>
       

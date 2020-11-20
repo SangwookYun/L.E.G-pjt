@@ -58,12 +58,8 @@ class Home extends Component {
                         </Col>
 
                 </Row>
-                <Row>
-                    
-                </Row>
-                <Row className = "footer">    
-                    
-                </Row>
+          
+                
             </Container>
         )
     }   
