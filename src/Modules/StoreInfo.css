@@ -1,0 +1,16 @@
+.name_storeinfo {
+    font-size: 45px;
+    color:#ff8500;
+    font-weight: bold;
+}
+
+.tag {
+    color:gray;
+    font-size: 18px;
+}
+.info {
+    font-size: 18px;
+}
+.map_storeinfo {
+    width:100%;
+}
