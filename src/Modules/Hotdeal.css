@@ -14,7 +14,7 @@
 .img_hotdeal {
     width:100%;
     height:70%;
-    background-image: url('../Pic/hotdeal1.jpg');
+    /* background-image: url('../Pic/hotdeal1.jpg'); */
     background-size: 100%;
 }
 .res_name_hotdeal {

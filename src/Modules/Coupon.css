@@ -1,0 +1,16 @@
+.coupon {
+    border: 1px solid #ff8500;
+    width:100%;
+    padding:20px;
+}
+
+.couponContents {
+    color:#ff8500;  
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.coupondesc {
+    line-height: 100%;
+    font-size:15px;
+}
