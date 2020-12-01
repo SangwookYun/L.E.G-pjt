@@ -31,6 +31,89 @@
 }
 .row_sort_food {
     
-    height:500px;
+    height:600px;
     margin-right:0px;
+    margin-bottom:100px;
 }
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ff8500;
+    background-color: white;
+    border-radius: 50%;
+    margin:5px;
+    display: inline-block;
+}
+.dot_selected {
+    height: 20px;
+    width: 20px;
+    background-color: #ff8500;
+    border-radius: 50%;
+    margin:5px;
+    display: inline-block;
+}
+
+.dot2 {
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    background-color: #ff8500;
+    border-radius: 50%;
+    margin:5px;
+    display: inline-block;
+}
+.dot2_selected {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin:5px;
+    display: inline-block;
+}
+
+.arrow {
+    border: solid #ff8500;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:60%;
+    border-width: 0 3px 3px 0;
+    display:inline-block;
+    padding: 3px;
+
+  }
+  .arrow2 {
+    border: solid white;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:60%;
+    border-width: 0 3px 3px 0;
+    display:inline-block;
+    padding: 3px;
+
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    left:88%;
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left:10%;
+  }
+  .right2 {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    left:90%;
+  }
+  
+  .left2 {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left:8%;
+  }

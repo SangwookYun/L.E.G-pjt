@@ -43,11 +43,13 @@
 }
 
 .black {
-    background: black;
+    background: white;
     z-index: 99;
     transition:.8s;
     height:100px;
     padding:10px 50px;
+    box-shadow: 0 2px 2px 3px rgba(0,0,0,.2);
+    /* border-bottom:1px solid red; */
 }
 .main_row {
     position:absolute;
@@ -57,22 +59,23 @@
     font-size: 20px;
     margin:auto;
     text-align: center;
-
 }
 .main_title {
     font-size:30px;
+    font-style:italic;
 }
 
 .main_title2 {
     font-size:55px;
+    margin-bottom:10px;
+
 }
-.main_title3 {
-    color:#ff8500;
-    font-weight: bold;
-    display: inline;
+.main_title2 img {
+    width:30%;
 }
-.main_title4 {
-    color:white;
-    font-weight: bold;
-    display: inline;
+
+.nav_item_icon {
+    width:15px;
+    margin:5px;
+    margin-top:0px;
 }
