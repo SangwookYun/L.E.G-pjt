@@ -1,5 +1,5 @@
 .SortBtn {
-    width:250px;
+    width:300px;
     height:100px;
     /* border:1px solid gray; */
     display:inline-block;
@@ -21,7 +21,7 @@
 
 
 .SortBtn:hover {
-    width:250px;
+    width:300px;
     height:100px;
     /* border:1px solid gray; */
     display:inline-block;
