@@ -20,63 +20,86 @@ import Korean from '../Pic/icon_korean.png'
 import Pizza from '../Pic/icon_pizza.png'
 import Chinese from '../Pic/icon_chinese.png'
 import Vietnam from '../Pic/icon_vietnamese.png'
+import Nav from '../Navigation/Nav'
 
-import dot from '../Pic/dot.png'
-
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 
 class Home extends Component {
+  
     render() {
+        const responsive = {
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 5
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 3
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 2
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 1
+            }
+          };
+       
+          
         return (
             <Container id="target" fluid>
+                <Nav></Nav>
                 <Row>
                     <Col className ="header_home"> HOT DEAL</Col>
                 </Row>
+           
                 <Row>
-                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                           <a class="arrow left"></a>
-                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-                            <a class="arrow right"></a>
+                    <Col xl={6} style = {{margin:"auto", textAlign:"center"}}>
+                    
+                    <Carousel responsive = {responsive} showDots = {true}>
+                        <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                        <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+                        <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+                        <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                        <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+                        <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+                    </Carousel>            
+                    <div>See more promotions</div>
                     </Col>
 
-                </Row>
-               
-                <Row>
-                    <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
-                        <span class="dot_selected"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </Col>
-                    <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
-                        <div> See more promotions</div>
-                    </Col>
-                    
                 </Row>
 
                 <Row className = "row_topreview">
                     <Col className ="header2_home"> TOP REVIEW</Col>
-                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                        <a class="arrow2 left2"></a>
+                </Row>
+                    
+                    
+                <Row className = "row_topreview row_topreview_contents">
+                    <Col xl={6} style = {{margin:"auto", textAlign:"center"}}>
+                    
+                    <Carousel responsive = {responsive} showDots = {true}>
                         <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
                         <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
                         <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <a class="arrow2 right2"></a>
+                        <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
+                        <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
+                        <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
+                    </Carousel>            
+                    <div>See more promotions</div>
                     </Col>
-
-                    
-                    <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
-                        <span class="dot2_selected"></span>
-                        <span class="dot2"></span>
-                        <span class="dot2"></span>
-                    </Col>
-                    <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
-                        <div> See more promotions</div>
-                    </Col>
-                    
 
                 </Row>
+                
+                    
+
+                
+                
+                
+
                 <Row className = "row_sort_food">    
                     <Col className ="header_home"> SORT OF FOOD</Col>
                     <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
@@ -95,7 +118,7 @@ class Home extends Component {
                         <SortBtn bgImage ={Pizza}></SortBtn>
                         <SortBtn bgImage ={Chinese}></SortBtn>
                         <SortBtn bgImage ={Vietnam}></SortBtn>
-                        </Col>
+                    </Col>
 
                 </Row>
           
@@ -105,3 +128,46 @@ class Home extends Component {
     }   
 }
 export default Home;
+
+// <Row>
+// <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+//        <a className="arrow left"></a>
+//         <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+//         <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+//         <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+//         <a className="arrow right"></a>
+// </Col>
+
+// </Row>
+
+// <Row>
+//                     <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
+//                         <span className="dot_selected"></span>
+//                         <span className="dot"></span>
+//                         <span className="dot"></span>
+//                     </Col>
+//                     <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
+//                         <div> See more promotions</div>
+//                     </Col>
+                    
+//                 </Row>
+
+
+
+// <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+// <a className="arrow2 left2"></a>
+// <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
+// <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
+// <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
+// <a className="arrow2 right2"></a>
+// </Col>
+
+
+// <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
+// <span className="dot2_selected"></span>
+// <span className="dot2"></span>
+// <span className="dot2"></span>
+// </Col>
+// <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
+// <div> See more promotions</div>
+// </Col>

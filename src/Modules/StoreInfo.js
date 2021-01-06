@@ -38,7 +38,7 @@ const Storeinfo = (props) => {
             <Row style={{marginTop:"10px"}}> 
                 <Col className = "tag" xl={{offset:2, span:1}}>Address</Col>
                 <Col className = "info" xl={6}>1002 Seymour St, Vancouver BC V6B 3M6</Col>
-            </Row >
+            </Row>
             <Row style={{marginTop:"10px"}}> 
                 <Col className = "tag" xl={{offset:2, span:1}}></Col>
                 <Col className = "info" xl={6}>1703 Robson St, Vancouver, BC V6G 1C8</Col>

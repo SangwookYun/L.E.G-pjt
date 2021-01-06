@@ -9,17 +9,25 @@
 
 .row_topreview {
     background-color: #ff8500;
-    height:500px;
+    height:100px;
     margin-right:0px;
+    margin-top: 50px;
+
+}
+.row_topreview_contents {
+  background-color: #ff8500;
+  height:500px;
+  margin-right:0px;
+  margin-top: 0px;
 
 }
 #target {
-    display: inline-table;
+    /* display: inline-table;
+    margin-right:auto;
+    margin-left:auto;*/
     padding-right:0;
     padding-left:0;
-    margin-right:auto;
-    margin-left:auto;
-    width:103%;
+    width:103%; 
 }
 .header2_home {
     margin-top: 30px;
@@ -116,4 +124,12 @@
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     left:8%;
+  }
+  .react-multi-carousel-list {
+    padding-bottom:30px !important;
+  }
+  .react-multi-carousel-dot-list {
+
+  }
+  .react-multi-carousel-track  {
   }
