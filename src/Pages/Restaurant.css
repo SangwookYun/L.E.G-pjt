@@ -1,0 +1,9 @@
+.restaurant_detail_container {
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.slider_restaurant {
+    position:relative;
+    top: 120px;
+}

@@ -2,16 +2,13 @@ import React, {Component} from 'react';
 import {Container, Row, Col, Form} from 'react-bootstrap'
 import img_header from '../Pic/img_header.jpg';
 import logo from '../Pic/logo_circle.png';
-import img_header2 from '../Pic/topReviewPic1.jpg';
 import logo_header from '../Pic/logo_header.png';
 import {Link} from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
-import menuIcon from '@material-ui/icons/Menu';
 import "./Nav.css";
 import icon_hotdeal from '../Pic/nav/icon_hot_deal.png'
 import icon_login from '../Pic/nav/icon_login.png'
 import icon_picked from '../Pic/nav/icon_picked.png'
+import icon_maginifier from '../Pic/icon_magnifier.png'
 
 class Nav extends Component {
     componentDidMount() {
@@ -24,14 +21,14 @@ class Nav extends Component {
       handleScroll = (e) => {
         let element = e.target;
         
-        console.log(window.scrollY)
+        // console.log(window.scrollY)
         if(window.scrollY<=350) {
             document.getElementById('nav_main').style.backgroundImage=`url(${img_header})`;
             document.getElementById('nav_bar').classList.remove('black');
             document.getElementById('test1').style.color = 'white';
             document.getElementById('test2').style.color = 'white';
             document.getElementById('test3').style.color = 'white';
-            console.log("top")
+            // console.log("top")
         }else if(window.scrollY>350) {
             document.getElementById('nav_main').style.backgroundImage=null;
             document.getElementById('nav_bar').classList.add('black');
@@ -51,25 +48,22 @@ class Nav extends Component {
         }
  
         return (
-            // <Container fluid onScroll={()=>this.handleScroll}>
             <Container fluid>
                 <Row>
-                    {/* <Col id = "nav_main" style= {style}> */}
                     <Col id = "nav_main" style = {style}>
-                        {/* <img id = "nav_main2"src={img_header}></img> */}
                         <nav id = "nav_bar" className="fixedNavbar">
                             <div className = "logo">
                                 <img src = {logo}></img>
                             </div>
                             <ul className="navbar-ul">
                                 <li className="nav-item">
-                                <Link id="test1" to='/'><img id="navbar_item_icon_hotdeal" class ="nav_item_icon" src={icon_hotdeal}></img>Hot Deal</Link>
+                                <Link id="test1" to='/'><img id="navbar_item_icon_hotdeal" className ="nav_item_icon" src={icon_hotdeal}></img>Hot Deal</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link id = "test2" to='/about'><img id="nabar_item_icon_picked" class ="nav_item_icon" src={icon_picked}></img>Picked</Link>
+                                <Link id = "test2" to='/about'><img id="nabar_item_icon_picked" className ="nav_item_icon" src={icon_picked}></img>Picked</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link id = "test3" to='/about'><img id="nabar_item_icon_login" class ="nav_item_icon" src={icon_login}></img>LogIn</Link>
+                                <Link id = "test3" to='/about'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>LogIn</Link>
                                 </li>
                             </ul>
                         </nav>
@@ -84,15 +78,17 @@ class Nav extends Component {
 
                             <Col xl={12}>
                                 <Form.Group style ={{width:"50%", textAlign:"center", margin:"auto"}}>
-                                    <Form.Control size="lg"  type="text" placeholder="Large text" />
-                                    <br />
+                                    <div className = "input_container">
+                                        <Form.Control className = "input_form" size="lg"  type="text" placeholder="Search Restaurant"></Form.Control>
+                                        <img className = "icon_maginifier"src = {icon_maginifier}></img>
+                                        <br />   
+                                    </div>
+                                    
                                 </Form.Group>
                             </Col>
                         </Row>
                         
                     </Col>
-                    
-                    
                 </Row>
             </Container>
             

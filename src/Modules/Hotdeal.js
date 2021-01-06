@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const Hotdeal = (props) => {
     return (
-        <Link to='/about'>
+        <Link to='/restaurant'>
         <div className = "hotdeal">                                
             <img className="img_hotdeal" src={props.bgImage}></img>
             <p className = "res_name_hotdeal">{props.name}</p>

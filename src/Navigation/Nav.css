@@ -79,3 +79,39 @@
     margin:5px;
     margin-top:0px;
 }
+
+
+.nav_bar_2 {
+    width:100%;
+    margin-left: 0px;
+    overflow:hidden;
+    position:fixed;
+    top:0;
+
+}
+
+.nav_item_icon_2 {
+    color:gray;
+    width:15px;
+    margin:5px;
+    margin-top:0px;
+}
+.nav-item_2 a{
+    color:gray !important;
+}
+.logo_nav_2 {
+    display:inline;
+}
+
+.icon_maginifier {
+    position:absolute;
+    width:3%;
+    bottom:50%;
+    right:20px;
+}
+.input_container {
+    position:relative;
+}
+.input_form {
+    border-radius: 30px !important;
+}
