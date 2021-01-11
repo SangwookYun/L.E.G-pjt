@@ -1,9 +1,7 @@
 .footer {
     width:100%;
     background-color: black;
-    height:500px;
-    margin-right:0px;
-    margin-top:30px;
+    margin-top:30px !important;
     
 }
 .footer_logo {
@@ -15,7 +13,6 @@
 }
 .footer_list {
     text-align: center;
-    
 }
 .footer_list ul {
     
