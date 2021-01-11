@@ -13,24 +13,32 @@
     padding:10px
 }
 
-.picture {
+.SortBtn:hover {
+    box-shadow: 0 0 15px rgba(33,33,33,.5);
+}
+.picture_sortbtn {
     width:100%;
     height:80px;
     overflow: hidden;
 }
 
+@media only screen and (max-width:600px) {
+    .SortBtn {
+        width:150px;
+        height:50px;
+        /* border:1px solid gray; */
+        display:inline-block;
+        background-size:100%;
+        margin:10px auto;
+        margin-left:20px;
+        margin-right:20px;
+        text-align: center;
+        border:1px solid #eee;
+        box-shadow:0 2px 3px #ccc;  
+    }
+    .picture_sortbtn {
+        
+    }
+    
 
-.SortBtn:hover {
-    width:300px;
-    height:100px;
-    /* border:1px solid gray; */
-    display:inline-block;
-    background-size:100%;
-    margin:10px auto;
-    margin-left:20px;
-    margin-right:20px;
-    text-align: center;
-    border:1px solid black;
-    box-shadow:0 2px 3px #ccc;  
-    padding:10px
 }

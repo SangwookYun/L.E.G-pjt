@@ -1,24 +1,35 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Footer.css'
 import logo_footer from '../Pic/logo_footer.png'
 import {Row, Col} from 'react-bootstrap'
 import facebook_logo from '../Pic/icon_facebook.png'
 import insta_logo from '../Pic/icon_insta.png'
 
-const Footer = (props) => {
+const moveFacebook = e => {
+    window.location.href = "https://www.facebook.ca"
+}
+const moveInstagram = e => {
+    window.location.href = "https://www.instagram.ca"
+}
+
+
+const Footer = () => {
     return (
         <div className = "footer">
             <Row>
-                <Col className = "footer_logo" xl= {4}>
-                    <img className ="logofooter" src = {logo_footer}></img>
-                    <Col className = "footer_list" xl= {12}>
-                    <ul>
-                        <li>About us</li>
-                        <li>Advertise</li>
-                        <li>Policies & Guideline</li>
-                        <li>Contact us</li>
-                    </ul>
-                </Col>
+                <Col xl= {4}>
+                    <div  className = "footer_logo" >
+                        <img className ="logofooter" src = {logo_footer}></img>
+                        <Col className = "footer_list" xl= {12}>
+                        <ul>
+                            <li>About us</li>
+                            <li>Advertise</li>
+                            <li>Policies & Guideline</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </Col>
+                    </div>
+                    
                 </Col>
                 <Col className ="footer_form" xl={{span:6, offset:1}}>
                     <div>
@@ -38,8 +49,8 @@ const Footer = (props) => {
             </Row>
             <Row>
                 <Col xl={12} style ={{textAlign:"center"}}>
-                    <img className = "footer_icon" src ={facebook_logo}></img>
-                    <img className = "footer_icon" src ={insta_logo}></img>
+                    <img className = "footer_icon" src ={facebook_logo} onClick = {moveFacebook}></img>
+                    <img className = "footer_icon" src ={insta_logo} onClick = {moveInstagram}></img>
                 </Col>
                 
                 <Col xl={12} style ={{textAlign:"center"}}>

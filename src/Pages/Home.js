@@ -27,7 +27,9 @@ import 'react-multi-carousel/lib/styles.css'
 
 
 class Home extends Component {
-  
+  constructor(props) {
+      
+  }
     render() {
         const responsive = {
             superLargeDesktop: {
@@ -47,81 +49,117 @@ class Home extends Component {
               breakpoint: { max: 464, min: 0 },
               items: 1
             }
-          };
-       
           
+        }
+        this.componentDidUpdate
+        const test = (window.innerWidth<600)?
+            <Row className = "row_withcontents">    
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Burger}></SortBtn>
+                    <SortBtn bgImage ={Cafe}></SortBtn>
+                    <SortBtn bgImage ={Chicken}></SortBtn>
+
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Italian}></SortBtn>
+                    <SortBtn bgImage ={Japanese}></SortBtn>
+                    <SortBtn bgImage ={Korean}></SortBtn>
+                    
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Pizza}></SortBtn>
+                    <SortBtn bgImage ={Chinese}></SortBtn>
+                    <SortBtn bgImage ={Vietnam}></SortBtn>
+                </Col>
+
+            </Row> :
+
+            <Row className = "row_withcontents">    
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Burger}></SortBtn>
+                    <SortBtn bgImage ={Cafe}></SortBtn>
+                    <SortBtn bgImage ={Chicken}></SortBtn>
+
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Italian}></SortBtn>
+                    <SortBtn bgImage ={Japanese}></SortBtn>
+                    <SortBtn bgImage ={Korean}></SortBtn>
+                    
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Pizza}></SortBtn>
+                    <SortBtn bgImage ={Chinese}></SortBtn>
+                    <SortBtn bgImage ={Vietnam}></SortBtn>
+                </Col>
+
+            </Row>
+
+
+
         return (
-            <Container id="target" fluid>
+            <Container id="container" fluid>
                 <Nav></Nav>
                 <Row>
-                    <Col className ="header_home"> HOT DEAL</Col>
+                    <Col> 
+                        <div className ="header header_type1">
+                            HOT DEAL
+                        </div>
+                    </Col>
                 </Row>
            
-                <Row>
-                    <Col xl={6} style = {{margin:"auto", textAlign:"center"}}>
+                <Row className>
+                    <Col xl={8} style = {{margin:"auto", textAlign:"center"}}>
                     
-                    <Carousel responsive = {responsive} showDots = {true}>
-                        <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                        <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                        <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-                        <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                        <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                        <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-                    </Carousel>            
-                    <div>See more promotions</div>
+                        <Carousel responsive = {responsive} showDots = {true}>
+                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                        </Carousel>            
+                        <div>See more promotions</div>
                     </Col>
 
                 </Row>
 
-                <Row className = "row_topreview">
-                    <Col className ="header2_home"> TOP REVIEW</Col>
+                <Row className = "row_withheader row_withcolor">
+                    <Col> 
+                        <div className ="header header_type2">
+                            TOP REVIEW
+                        </div>
+                    </Col>
                 </Row>
                     
+                <Row className = "row_withcontents row_withcolor">
+                    <Col xl={8} style = {{margin:"auto", textAlign:"center"}}>
                     
-                <Row className = "row_topreview row_topreview_contents">
-                    <Col xl={6} style = {{margin:"auto", textAlign:"center"}}>
-                    
-                    <Carousel responsive = {responsive} showDots = {true}>
-                        <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
-                        <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
-                    </Carousel>            
-                    <div>See more promotions</div>
-                    </Col>
-
-                </Row>
-                
-                    
-
-                
-                
-                
-
-                <Row className = "row_sort_food">    
-                    <Col className ="header_home"> SORT OF FOOD</Col>
-                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                        <SortBtn bgImage ={Burger}></SortBtn>
-                        <SortBtn bgImage ={Cafe}></SortBtn>
-                        <SortBtn bgImage ={Chicken}></SortBtn>
- 
-                    </Col>
-                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                        <SortBtn bgImage ={Italian}></SortBtn>
-                        <SortBtn bgImage ={Japanese}></SortBtn>
-                        <SortBtn bgImage ={Korean}></SortBtn>
-                        
-                    </Col>
-                    <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                        <SortBtn bgImage ={Pizza}></SortBtn>
-                        <SortBtn bgImage ={Chinese}></SortBtn>
-                        <SortBtn bgImage ={Vietnam}></SortBtn>
+                        <Carousel responsive = {responsive} showDots = {true}>
+                            <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
+                            <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
+                            <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
+                            <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
+                            <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
+                            <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
+                        </Carousel>            
+                        <div>See more promotions</div>
                     </Col>
 
                 </Row>
-          
+                
+                <Row className = "row_withheader">
+                    <Col> 
+                        <div className ="header header_type1">
+                            SORT OF FOOD
+                        </div>
+                    </Col>
+                </Row>
+
+                {test}
                 
             </Container>
         )

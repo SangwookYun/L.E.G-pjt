@@ -12,6 +12,9 @@
     position:relative;
     overflow:hidden;
 }
+.topreview:hover {
+    box-shadow: 0 0 15px rgba(33,33,33,.5);
+}
 .picture_topreview {
     width:150%;
 }
