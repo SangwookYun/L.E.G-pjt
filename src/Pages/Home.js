@@ -28,7 +28,7 @@ import 'react-multi-carousel/lib/styles.css'
 
 class Home extends Component {
   constructor(props) {
-      
+      super(props);
   }
     render() {
         const responsive = {
