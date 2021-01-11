@@ -51,51 +51,6 @@ class Home extends Component {
             }
           
         }
-        this.componentDidUpdate
-        const test = (window.innerWidth<600)?
-            <Row className = "row_withcontents">    
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Burger}></SortBtn>
-                    <SortBtn bgImage ={Cafe}></SortBtn>
-                    <SortBtn bgImage ={Chicken}></SortBtn>
-
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Italian}></SortBtn>
-                    <SortBtn bgImage ={Japanese}></SortBtn>
-                    <SortBtn bgImage ={Korean}></SortBtn>
-                    
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Pizza}></SortBtn>
-                    <SortBtn bgImage ={Chinese}></SortBtn>
-                    <SortBtn bgImage ={Vietnam}></SortBtn>
-                </Col>
-
-            </Row> :
-
-            <Row className = "row_withcontents">    
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Burger}></SortBtn>
-                    <SortBtn bgImage ={Cafe}></SortBtn>
-                    <SortBtn bgImage ={Chicken}></SortBtn>
-
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Italian}></SortBtn>
-                    <SortBtn bgImage ={Japanese}></SortBtn>
-                    <SortBtn bgImage ={Korean}></SortBtn>
-                    
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Pizza}></SortBtn>
-                    <SortBtn bgImage ={Chinese}></SortBtn>
-                    <SortBtn bgImage ={Vietnam}></SortBtn>
-                </Col>
-
-            </Row>
-
-
 
         return (
             <Container id="container" fluid>
@@ -159,7 +114,26 @@ class Home extends Component {
                     </Col>
                 </Row>
 
-                {test}
+                <Row className = "row_withcontents">    
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Burger}></SortBtn>
+                    <SortBtn bgImage ={Cafe}></SortBtn>
+                    <SortBtn bgImage ={Chicken}></SortBtn>
+
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Italian}></SortBtn>
+                    <SortBtn bgImage ={Japanese}></SortBtn>
+                    <SortBtn bgImage ={Korean}></SortBtn>
+                    
+                </Col>
+                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
+                    <SortBtn bgImage ={Pizza}></SortBtn>
+                    <SortBtn bgImage ={Chinese}></SortBtn>
+                    <SortBtn bgImage ={Vietnam}></SortBtn>
+                </Col>
+
+            </Row>
                 
             </Container>
         )
