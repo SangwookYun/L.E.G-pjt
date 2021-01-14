@@ -63,7 +63,7 @@ class Home extends Component {
                     </Col>
                 </Row>
            
-                <Row className>
+                <Row className = "row_withcontents">
                     <Col xl={8} style = {{margin:"auto", textAlign:"center"}}>
                     
                         <Carousel responsive = {responsive} showDots = {true}>
@@ -114,27 +114,29 @@ class Home extends Component {
                     </Col>
                 </Row>
 
-                <Row className = "row_withcontents">    
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Burger}></SortBtn>
-                    <SortBtn bgImage ={Cafe}></SortBtn>
-                    <SortBtn bgImage ={Chicken}></SortBtn>
+                                
+                <Row className = "row_withcontents row_sortbtn">    
+                    <Col className = "col_sortbtn" xl={12}>
+                        <SortBtn bgImage ={Burger}></SortBtn>
+                        <SortBtn bgImage ={Cafe}></SortBtn>
+                        <SortBtn bgImage ={Chicken}></SortBtn>
 
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Italian}></SortBtn>
-                    <SortBtn bgImage ={Japanese}></SortBtn>
-                    <SortBtn bgImage ={Korean}></SortBtn>
-                    
-                </Col>
-                <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-                    <SortBtn bgImage ={Pizza}></SortBtn>
-                    <SortBtn bgImage ={Chinese}></SortBtn>
-                    <SortBtn bgImage ={Vietnam}></SortBtn>
-                </Col>
+                    </Col>
+                    <Col className = "col_sortbtn" xl={12}>
+                        <SortBtn bgImage ={Italian}></SortBtn>
+                        <SortBtn bgImage ={Japanese}></SortBtn>
+                        <SortBtn bgImage ={Korean}></SortBtn>
+                        
+                    </Col>
+                    <Col className = "col_sortbtn" xl={12}>
+                        <SortBtn bgImage ={Pizza}></SortBtn>
+                        <SortBtn bgImage ={Chinese}></SortBtn>
+                        <SortBtn bgImage ={Vietnam}></SortBtn>
+                    </Col>
 
-            </Row>
+                </Row>
                 
+                    
             </Container>
         )
     }   
@@ -183,3 +185,5 @@ export default Home;
 // <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
 // <div> See more promotions</div>
 // </Col>
+
+

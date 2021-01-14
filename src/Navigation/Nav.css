@@ -147,7 +147,6 @@
     }
     .burger_menu {
         width:50px;
-        margin-right:20px;
         float:right;
         display:flex;
     }
@@ -155,7 +154,7 @@
         height:250px !important
     }
     .main_title2 {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 
     .input_form_group_nav {
@@ -167,7 +166,17 @@
     .wrapper_icon_magnifier_nav {
         width:10%;
         right:15px;
+        padding:3px;
+    }
+    .input_form {
+        height:28px !important;
+        font-size:1.0rem !important
     }
         
-    
+    .nav_bar_2 {
+        padding:20px;
+    }
+    .wrapper_burger {
+        display:inline;
+    }
 }

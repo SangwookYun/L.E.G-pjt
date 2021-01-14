@@ -27,7 +27,8 @@
 }
 .row_withcolor {
     background-color: #ff8500;
-    margin-right:0px;
+    width:100%;
+    margin-right: 0px;;
 
 }
 .react-multiple-carousel__arrow {
@@ -36,5 +37,22 @@
 .react-multi-carousel-list {
   padding-bottom:30px !important;
 }
+.col_sortbtn {
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width:600px) {
+  .col_sortbtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:50px;
+  }
+  .row_sortbtn {
+    height:300px;
+  }
+
+}
+
+
 
 

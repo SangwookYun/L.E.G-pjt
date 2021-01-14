@@ -69,3 +69,32 @@
     color:gray;
     margin-top: 3px;
 }
+
+@media only screen and (max-width:600px) {
+    .logofooter {
+        width:50px;
+    }
+    .footer_list ul li {
+        font-size:15px;
+        margin-top:10px;
+        margin-left:50px;
+    }
+    .footer_list {
+        display:inline-block;
+    }
+    .footer_form  {
+        margin:20px;
+    }
+    .footer_copyright {
+        margin-bottom: 20px;
+    }
+    .footer_logo {
+        height:200px;
+    }
+    .wrapper_logo {
+        display:inline-block;
+        vertical-align: middle;
+        height:100%;
+        padding-bottom:100px;
+    }
+}

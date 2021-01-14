@@ -7,6 +7,8 @@ import icon_hotdeal from '../Pic/nav/icon_hot_deal.png'
 import icon_login from '../Pic/nav/icon_login.png'
 import icon_picked from '../Pic/nav/icon_picked.png'
 
+import burger from '../Pic/burger.jpg'
+
 class Nav_2 extends Component {
     render() {
         return (
@@ -29,6 +31,9 @@ class Nav_2 extends Component {
                                 <Link to='/about'><img id="nabar_item_icon_login" className ="nav_item_icon_2" src={icon_login}></img>LogIn</Link>
                                 </li>
                             </ul>
+                            <div className = "wrapper_burger">
+                                <img src = {burger} className = "burger_menu" ></img>
+                            </div>
                         </nav>                        
                     </Col>
                 </Row>            
