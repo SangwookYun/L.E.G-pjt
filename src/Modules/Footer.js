@@ -19,15 +19,18 @@ const Footer = () => {
             <Row>
                 <Col xl= {4}>
                     <div  className = "footer_logo" >
-                        <img className ="logofooter" src = {logo_footer}></img>
-                        <Col className = "footer_list" xl= {12}>
-                        <ul>
-                            <li>About us</li>
-                            <li>Advertise</li>
-                            <li>Policies & Guideline</li>
-                            <li>Contact us</li>
-                        </ul>
-                    </Col>
+                        <div className = "wrapper_logo">
+                            <img className ="logofooter" src = {logo_footer}></img>
+                        </div>
+                        
+                        <div className = "footer_list">
+                            <ul>
+                                <li>About us</li>
+                                <li>Advertise</li>
+                                <li>Policies & Guideline</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
                     </div>
                     
                 </Col>
