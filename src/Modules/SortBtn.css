@@ -24,21 +24,24 @@
 
 @media only screen and (max-width:600px) {
     .SortBtn {
-        width:150px;
+        width:100px;
         height:50px;
         /* border:1px solid gray; */
         display:inline-block;
         background-size:100%;
         margin:10px auto;
-        margin-left:20px;
-        margin-right:20px;
+        margin-left:5px;
+        margin-right:5px;
         text-align: center;
         border:1px solid #eee;
         box-shadow:0 2px 3px #ccc;  
     }
     .picture_sortbtn {
-        
+        width:100%;
+        height:40px;
+        overflow: hidden;
     }
+    
     
 
 }
