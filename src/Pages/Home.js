@@ -25,10 +25,21 @@ import Nav from '../Navigation/Nav'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
+import axios from 'axios'
+
 
 class Home extends Component {
   constructor(props) {
       super(props);
+  }
+  state = {
+      restaurants : []
+  }
+  componentDidMount() {
+      axios.get(`http://127.0.0.1:8080/api/v1/restaurant/`).then(res=> {
+          console.log(res.data);
+          this.setState({restaurants: res.data.data})
+      })
   }
     render() {
         const responsive = {
@@ -62,20 +73,14 @@ class Home extends Component {
                         </div>
                     </Col>
                 </Row>
-           
+
+                
                 <Row className = "row_withcontents">
                     <Col xl={8} style = {{margin:"auto", textAlign:"center"}}>
                     
                         <Carousel responsive = {responsive} showDots = {true}>
-                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-                            <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+                            {this.state.restaurants.map(restaurant => 
+                                <Hotdeal bgImage = {hotdeal1} name = {restaurant.name} contents={restaurant.mainTitle} ></Hotdeal>)}
                         </Carousel>            
                         <div>See more promotions</div>
                     </Col>
@@ -187,3 +192,12 @@ export default Home;
 // </Col>
 
 
+// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
+// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
