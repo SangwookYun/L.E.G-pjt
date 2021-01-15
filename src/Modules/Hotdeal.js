@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom'
 
 
 const Hotdeal = (props) => {
+    console.log(props.name)
     return (
-        <Link to='/restaurant'>
+
+        <Link to={`/restaurant/${props.id}`}>
             <div className = "hotdeal">                                
                 <img className="img_hotdeal" src={props.bgImage}></img>
                 <p className = "res_name_hotdeal">{props.name}</p>

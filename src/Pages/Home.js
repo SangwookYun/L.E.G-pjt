@@ -80,7 +80,7 @@ class Home extends Component {
                     
                         <Carousel responsive = {responsive} showDots = {true}>
                             {this.state.restaurants.map(restaurant => 
-                                <Hotdeal bgImage = {hotdeal1} name = {restaurant.name} contents={restaurant.mainTitle} ></Hotdeal>)}
+                                <Hotdeal bgImage = {restaurant.mainPicture} id = {restaurant.newid} name = {restaurant.name} contents={restaurant.mainTitle} ></Hotdeal>)}
                         </Carousel>            
                         <div>See more promotions</div>
                     </Col>
