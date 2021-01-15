@@ -11,12 +11,25 @@ import pic6 from '../Pic/store_page/neroWaffle/neroWaffle6.png'
 import pic7 from '../Pic/store_page/neroWaffle/neroWaffle7.png'
 import pic8 from '../Pic/store_page/neroWaffle/neroWaffle8.png'
 
+import axios from 'axios'
 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 class Restaurant extends Component {
-    
+  constructor(props) {
+      super(props);
+  }
+  state = {
+      data : []
+  }
+  componentDidMount() {
+
+      axios.get(`http://127.0.0.1:8080/api/v1`+this.props.location.pathname).then(res=> {
+          console.log(res.data.data[0]);
+          this.setState({data: res.data.data[0]})
+      })
+  }
     render() {
         const responsive = {
             superLargeDesktop: {
@@ -26,7 +39,7 @@ class Restaurant extends Component {
             },
             desktop: {
               breakpoint: { max: 3000, min: 1024 },
-              items: 3
+              items: 4
             },
             tablet: {
               breakpoint: { max: 1024, min: 464 },
@@ -38,22 +51,61 @@ class Restaurant extends Component {
             }
           
         }
-
+        console.log(this.state.data)
         return (
+          
             <Container fluid className = "restaurant_detail_container">
                 <Nav_2></Nav_2>
-                <Carousel responsive = {responsive} showDots = {true}>
-                 <img src={pic1}></img>
-                 <img src={pic4}></img>
-                 <img src={pic5}></img>
-                 <img src={pic6}></img>
-                 <img src={pic7}></img>
-                 <img src={pic8}></img>
+                <Carousel className = "wrapper_pic_restaurant" responsive = {responsive} showDots = {true}>
+                 <img className = "pic_restaurant" src={pic1}></img>
+                 <img className = "pic_restaurant" src={pic4}></img>
+                 <img className = "pic_restaurant" src={pic5}></img>
+                 <img className = "pic_restaurant" src={pic6}></img>
+                 <img className = "pic_restaurant" src={pic7}></img>
+                 <img className = "pic_restaurant" src={pic8}></img>
                 </Carousel>            
 
                 <Row style={{marginTop:"100px"}}>
                     <Col xl={12}>
-                        <Storeinfo></Storeinfo>
+                    <div>
+                    <Row>
+                        <Col xl={{span:4, offset:2}}>
+                            <div className = "name_storeinfo">
+                                {this.state.data.name}
+                            </div>
+                            
+                        </Col>
+                        <Col xl={3}>
+        
+                        </Col>
+        
+                    </Row>
+                   
+                    <Row style={{marginTop:"20px"}}> 
+                        <Col className = "tag" xl={{offset:2, span:1}}>Phone</Col>
+                        <Col className = "info" xl={6}>{this.state.data.phone}</Col>
+                    </Row>
+                    <Row style={{marginTop:"10px"}}> 
+                        <Col className = "tag" xl={{offset:2, span:1}}>Address</Col>
+                        <Col className = "info" xl={6}>{this.state.data.address}</Col>
+                    </Row>
+                    <Row style={{marginTop:"10px"}}> 
+                        <Col  className = "tag" xl={{offset:2, span:1}}>Website</Col>
+                        <Col className = "info" xl={6}>{this.state.data.website}</Col>
+                    </Row>
+                    <Row style={{marginTop:"10px"}}> 
+                        <Col className = "tag"  xl={{offset:2, span:1}}>hours</Col>
+                        <Col className = "info" xl={6}>9:00 am - 11:30 pm / Friday - Saturday</Col>
+                    </Row>
+                    <Row style={{marginTop:"10px"}}> 
+                        <Col className = "tag"  xl={{offset:2, span:1}}>Etc.</Col>
+                        <Col className = "info" xl={6}>Parking available</Col>
+                    </Row>
+                    
+                    
+                    
+                </div>    
+
                     </Col>
                 </Row>
 
@@ -71,4 +123,38 @@ export default Restaurant;
 // <img style = {{width:"100%"}} className = "store_picture_about" src={pic6}></img>
 // <img style = {{width:"100%"}} className = "store_picture_about" src={pic7}></img>
 // <img style = {{width:"100%"}} className = "store_picture_about" src={pic8}></img>
-// </Slider>
+// // </Slider>
+
+// <Row style={{marginTop:"10px"}}> 
+//                         <Col className = "tag"  xl={{offset:2, span:1}}></Col>
+//                         <Col className = "info" xl={7}>
+//                             <img className="map_storeinfo" src ={map}></img>
+//                         </Col>
+//                     </Row>
+//                     <Row style={{marginTop:"10px"}}> 
+//                         <Col xl ={{offset:2, span:10}} style={{margin:"auto"}}>
+                        
+//                         </Col>
+                        
+//                     </Row>
+//                     <Row>
+//                         <Col xl={{offset:2, span:8}}>
+//                             <div>Reviews</div>
+                            
+//                         <hr></hr>
+//                         </Col>
+//                     </Row>
+                    
+//                     <Row>
+//                         <Col xl={{offset:2, span:8}}>
+//                             <img style={{width:"100%"}} src={mock_review}>
+        
+//                             </img>
+//                         </Col>
+//                     </Row>
+
+// <Row>
+// <Col xl={{span:10, offset:2}}>
+//     <Coupon></Coupon>
+// </Col>
+// </Row>
