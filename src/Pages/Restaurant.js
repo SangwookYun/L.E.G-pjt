@@ -1,36 +1,34 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap'
 import './Restaurant.css'
-import Slider from 'react-styled-carousel'
-import Storeinfo from '../Modules/StoreInfo'
 import Nav_2 from '../Navigation/Nav_2'
-import pic1 from '../Pic/store_page/neroWaffle/neroWaffle1.png'
-import pic4 from '../Pic/store_page/neroWaffle/neroWaffle4.png'
-import pic5 from '../Pic/store_page/neroWaffle/neroWaffle5.png'
-import pic6 from '../Pic/store_page/neroWaffle/neroWaffle6.png'
-import pic7 from '../Pic/store_page/neroWaffle/neroWaffle7.png'
-import pic8 from '../Pic/store_page/neroWaffle/neroWaffle8.png'
-
 import axios from 'axios'
-
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+
 
 class Restaurant extends Component {
   constructor(props) {
       super(props);
   }
   state = {
-      data : []
+    isLoading: true,  
+    data : []
+      
   }
   componentDidMount() {
 
       axios.get(`http://127.0.0.1:8080/api/v1`+this.props.location.pathname).then(res=> {
           console.log(res.data.data[0]);
-          this.setState({data: res.data.data[0]})
+          this.setState({
+              data: res.data.data[0],
+            isLoading:false})
       })
   }
+
+
     render() {
+        
         const responsive = {
             superLargeDesktop: {
               // the naming can be any, depends on you.
@@ -51,19 +49,16 @@ class Restaurant extends Component {
             }
           
         }
-        console.log(this.state.data)
+        const {isLoading, data} = this.state;
+
         return (
           
             <Container fluid className = "restaurant_detail_container">
                 <Nav_2></Nav_2>
-                <Carousel className = "wrapper_pic_restaurant" responsive = {responsive} showDots = {true}>
-                 <img className = "pic_restaurant" src={pic1}></img>
-                 <img className = "pic_restaurant" src={pic4}></img>
-                 <img className = "pic_restaurant" src={pic5}></img>
-                 <img className = "pic_restaurant" src={pic6}></img>
-                 <img className = "pic_restaurant" src={pic7}></img>
-                 <img className = "pic_restaurant" src={pic8}></img>
-                </Carousel>            
+                {!isLoading?(<Carousel className = "wrapper_pic_restaurant" responsive = {responsive} showDots = {true}>
+                {this.state.data.pictures.map(pic => (<img className = "pic_restaurant" src={pic}></img>))}
+                </Carousel>): console.log("error")}
+
 
                 <Row style={{marginTop:"100px"}}>
                     <Col xl={12}>

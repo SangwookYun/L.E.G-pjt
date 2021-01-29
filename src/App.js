@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import React, {Component} from 'react'
 import './App.css';
-import {Route, BrowserRouter as Router, Link, Switch} from 'react-router-dom'
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Restaurant from './Pages/Restaurant'
 import SearchResult from './Pages/SearchResult'
+import Login from './Pages/Login'
+import Signup from './Pages/Signup'
 import Footer from './Modules/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,8 @@ class App extends Component {
               <Route path = "/about" component = {About} />
               <Route path = "/restaurant/:id" component = {Restaurant} />
               <Route path = "/searchResult" component = {SearchResult} />
+              <Route path = "/login" component = {Login} />
+              <Route path = "/register" component = {Signup} />
             </Switch>
             <Footer></Footer>
           </div>

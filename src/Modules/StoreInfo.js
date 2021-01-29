@@ -1,15 +1,9 @@
-import React, {Component} from 'react';
-import {Container, Row, Col} from 'react-bootstrap'
+import React from 'react';
+import {Row, Col} from 'react-bootstrap'
 import './StoreInfo.css'
 import map from '../Pic/store_page/neroWaffle/maps.png';
-
 import mock_review from '../Pic/store_page/neroWaffle/review.png';
 import Coupon from './Coupon'
-
-
-
-
-
 
 const Storeinfo = (props) => {
     return (
@@ -58,7 +52,7 @@ const Storeinfo = (props) => {
             <Row style={{marginTop:"10px"}}> 
                 <Col className = "tag"  xl={{offset:2, span:1}}></Col>
                 <Col className = "info" xl={7}>
-                    <img className="map_storeinfo" src ={map}></img>
+                    <img alt = "alt" className="map_storeinfo" src ={map}></img>
                 </Col>
             </Row>
             <Row style={{marginTop:"10px"}}> 
@@ -77,7 +71,7 @@ const Storeinfo = (props) => {
             
             <Row>
                 <Col xl={{offset:2, span:8}}>
-                    <img style={{width:"100%"}} src={mock_review}>
+                    <img style={{width:"100%"}} alt = "alt" src={mock_review}>
 
                     </img>
                 </Col>

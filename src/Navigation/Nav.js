@@ -90,7 +90,7 @@ class Nav extends Component {
                                 <Link id = "navbar_item_picked" to='/about'><img id="nabar_item_icon_picked" className ="nav_item_icon" src={icon_picked}></img>Picked</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link id = "navbar_item_login" to='/about'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>LogIn</Link>
+                                <Link id = "navbar_item_login" to='/login'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>LogIn</Link>
                                 </li>
                             </ul>
 
@@ -108,24 +108,7 @@ class Nav extends Component {
                                 
                             </Col>
 
-                            <Col xl={12}>
-                                <Form.Group className = "input_form_group_nav">
-                                    <div className = "input_container">
-                                        <Form.Control className = "input_form" size="lg"  type="text" placeholder="Search Restaurant">
-                                        
-                                        </Form.Control>
-                                        <div className = "wrapper_icon_magnifier_nav">
-                                            <Link to = "/searchResult">
-                                                <img className = "icon_maginifier"src = {icon_maginifier}></img>
-                                            </Link>
-                                        </div>
-                                        
-                                        
-                                        <br />   
-                                    </div>
-                                    
-                                </Form.Group>
-                            </Col>
+                            
                         </Row>
                         
                     </Col>
@@ -136,3 +119,23 @@ class Nav extends Component {
     }   
 }
 export default Nav;
+
+
+// <Col xl={12}>
+//                                 <Form.Group className = "input_form_group_nav">
+//                                     <div className = "input_container">
+//                                         <Form.Control className = "input_form" size="lg"  type="text" placeholder="Search Restaurant">
+                                        
+//                                         </Form.Control>
+//                                         <div className = "wrapper_icon_magnifier_nav">
+//                                             <Link to = "/searchResult">
+//                                                 <img className = "icon_maginifier"src = {icon_maginifier}></img>
+//                                             </Link>
+//                                         </div>
+                                        
+                                        
+//                                         <br />   
+//                                     </div>
+                                    
+//                                 </Form.Group>
+//                             </Col>
