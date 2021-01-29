@@ -22,13 +22,13 @@ class Nav_2 extends Component {
                             </div>
                             <ul className="navbar-ul">
                                 <li className="nav-item_2">
-                                <Link to='/'><img id="navbar_item_icon_hotdeal" className ="nav_item_icon_2" src={icon_hotdeal}></img>Hot Deal</Link>
+                                <Link to='/'><img id="navbar_item_icon_hotdeal" className ="nav_item_icon_2" alt = "alt" src={icon_hotdeal}></img>Hot Deal</Link>
                                 </li>
                                 <li className="nav-item_2">
-                                <Link to='/about'><img id="nabar_item_icon_picked" className ="nav_item_icon_2" src={icon_picked}></img>Picked</Link>
+                                <Link to='/about'><img id="nabar_item_icon_picked" className ="nav_item_icon_2" alt = "alt" src={icon_picked}></img>Picked</Link>
                                 </li>
                                 <li className="nav-item_2">
-                                <Link to='/about'><img id="nabar_item_icon_login" className ="nav_item_icon_2" src={icon_login}></img>LogIn</Link>
+                                <Link to='/about'><img id="nabar_item_icon_login" className ="nav_item_icon_2" alt = "alt" src={icon_login}></img>LogIn</Link>
                                 </li>
                             </ul>
                             <div className = "wrapper_burger">

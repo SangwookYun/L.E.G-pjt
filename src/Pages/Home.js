@@ -5,9 +5,6 @@ import Hotdeal from '../Modules/Hotdeal'
 import Topreview from '../Modules/Topreview';
 import SortBtn from '../Modules/SortBtn';
 
-import hotdeal1 from '../Pic/hotdeal1.jpg'
-import hotdeal2 from '../Pic/hotdeal2.jpg'
-import hotdeal3 from '../Pic/hotdeal3.jpg'
 import topreview1 from '../Pic/topReviewPic1.jpg'
 import topreview2 from '../Pic/topReviewPic2.jpg'
 import topreview3 from '../Pic/topReviewPic3.jpg'
@@ -80,7 +77,7 @@ class Home extends Component {
                     
                         <Carousel responsive = {responsive} showDots = {true}>
                             {this.state.restaurants.map(restaurant => 
-                                <Hotdeal bgImage = {restaurant.mainPicture} id = {restaurant.newid} name = {restaurant.name} contents={restaurant.mainTitle} ></Hotdeal>)}
+                                <Hotdeal key = {restaurant.newid} bgImage = {restaurant.mainPicture} id = {restaurant.newid} name = {restaurant.name} contents={restaurant.mainTitle} ></Hotdeal>)}
                         </Carousel>            
                         <div>See more promotions</div>
                     </Col>

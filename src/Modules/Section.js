@@ -49,8 +49,8 @@ const Section = (props) => {
                 </Col>
                 <Col xl={4}>
                     <div>
-                        <img className = "pic_section" src = {Img1}></img>
-                        <img className = "pic_section" src = {Img2}></img>
+                        <img className = "pic_section" alt = "alt" src = {Img1}></img>
+                        <img className = "pic_section" alt = "alt" src = {Img2}></img>
                     </div>
                 </Col>
             </Row>                        

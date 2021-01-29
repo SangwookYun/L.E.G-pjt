@@ -20,7 +20,7 @@ const Footer = () => {
                 <Col xl= {4}>
                     <div  className = "footer_logo" >
                         <div className = "wrapper_logo">
-                            <img className ="logofooter" src = {logo_footer}></img>
+                            <img className ="logofooter" alt = "alt" src = {logo_footer}></img>
                         </div>
                         
                         <div className = "footer_list">
@@ -52,8 +52,8 @@ const Footer = () => {
             </Row>
             <Row>
                 <Col xl={12} style ={{textAlign:"center"}}>
-                    <img className = "footer_icon" src ={facebook_logo} onClick = {moveFacebook}></img>
-                    <img className = "footer_icon" src ={insta_logo} onClick = {moveInstagram}></img>
+                    <img className = "footer_icon" alt = "alt" src ={facebook_logo} onClick = {moveFacebook}></img>
+                    <img className = "footer_icon" alt = "alt" src ={insta_logo} onClick = {moveInstagram}></img>
                 </Col>
                 
                 <Col xl={12} style ={{textAlign:"center"}}>
