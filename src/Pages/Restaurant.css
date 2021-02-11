@@ -1,28 +1,36 @@
 .restaurant_detail_container {
-    padding-left:0px !important;
-    padding-right:0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 .slider_restaurant {
-    position:relative;
+    position: relative;
     top: 120px;
 }
+
 .name_storeinfo {
     font-size: 45px;
-    color:#ff8500;
+    color: #ff8500;
     font-weight: bold;
 }
 
 .tag {
-    color:gray;
+    color: gray;
     font-size: 18px;
 }
+
 .info {
     font-size: 18px;
 }
+
 .wrapper_pic_restaurant {
     margin-top: 100px;
 }
+
 .pic_restaurant {
-    width:100%;
+    width: 100%;
+}
+
+.map_col {
+    margin-top: 50px;
 }
