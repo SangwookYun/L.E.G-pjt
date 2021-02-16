@@ -11,12 +11,31 @@ import icon_picked from '../Pic/nav/icon_picked.png'
 
 import icon_maginifier from '../Pic/icon_magnifier.png'
 import burger from '../Pic/burger.jpg'
-
+import firebase from "firebase/app";
 
 class Nav extends Component {
+    constructor(props) {
+        super(props);
+    }
+    state = {
+        user : null,
+        loggedin:false
+    }
     componentDidMount() {
         console.log(window.innerWidth)
         window.addEventListener('scroll', this.handleScroll);
+        firebase.auth().onAuthStateChanged((user)=> {
+            if(user) {
+                this.setState({
+                    user: user.email,
+                    loggedin:true
+                  });
+                console.log(user)
+            }else {
+            console.log("no user");
+            }
+        })
+
       }
     
       componentWillUnmount() {
@@ -90,7 +109,10 @@ class Nav extends Component {
                                 <Link id = "navbar_item_picked" to='/about'><img id="nabar_item_icon_picked" className ="nav_item_icon" src={icon_picked}></img>Picked</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link id = "navbar_item_login" to='/login'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>LogIn</Link>
+                                {
+                                    this.state.loggedin?<Link id = "navbar_item_login" to='/User'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>User</Link>:
+                                    <Link id = "navbar_item_login" to='/login'><img id="nabar_item_icon_login" className ="nav_item_icon" src={icon_login}></img>Login</Link>
+                                }
                                 </li>
                             </ul>
 

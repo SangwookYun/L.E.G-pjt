@@ -7,6 +7,7 @@ import Restaurant from "./Pages/Restaurant";
 import SearchResult from "./Pages/SearchResult";
 import Login from "./Pages/Login.jsx";
 import Signup from "./Pages/Signup";
+import User from "./Pages/User";
 import Footer from "./Modules/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/searchResult" component={SearchResult} />{" "}
             <Route path="/login" component={Login} />{" "}
             <Route path="/register" component={Signup} />{" "}
+            <Route path="/user" component={User} />{" "}
           </Switch>{" "}
           <Footer> </Footer>{" "}
         </div>{" "}

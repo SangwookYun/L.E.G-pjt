@@ -34,3 +34,13 @@
 .map_col {
     margin-top: 50px;
 }
+
+
+@media only screen and (max-width:600px) {
+    .name_storeinfo {
+        font-size:25px;
+        color: #ff8500;
+        font-weight: bold;
+    }   
+
+}
