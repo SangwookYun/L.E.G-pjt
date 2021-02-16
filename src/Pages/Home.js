@@ -35,7 +35,7 @@ class Home extends Component {
       user : null
   }
   componentDidMount() {
-      axios.get(`http://127.0.0.1:8080/api/v1/restaurant/`).then(res=> {
+      axios.get(`http://leg-backend.herokuapp.com/api/v1/restaurant/`).then(res=> {
           console.log(res.data);
           this.setState({restaurants: res.data.data})
       })
