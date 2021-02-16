@@ -4,6 +4,8 @@ import "./Login_signup.css";
 import Nav_2 from "../Navigation/Nav_2";
 import firebase from "firebase/app";
 import "firebase/auth";
+import {AuthContext} from "../auth"
+
 export default class Login extends Component {
   state = {
     email: "",
@@ -30,11 +32,21 @@ export default class Login extends Component {
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
         console.log(user, "success");
+        window.location.href = '/'
       })
       .catch((e) => {
         console.log(e.message);
       });
   };
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged((user)=> {
+      if(user) {
+        console.log(user);
+      }else {
+        console.log("no user");
+      }
+    })
+  }
 
   render() {
     return (

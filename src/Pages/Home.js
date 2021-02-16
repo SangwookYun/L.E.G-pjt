@@ -23,20 +23,33 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 import axios from 'axios'
+import firebase from "firebase/app";
 
-
+  
 class Home extends Component {
   constructor(props) {
       super(props);
   }
   state = {
-      restaurants : []
+      restaurants : [],
+      user : null
   }
   componentDidMount() {
       axios.get(`http://127.0.0.1:8080/api/v1/restaurant/`).then(res=> {
           console.log(res.data);
           this.setState({restaurants: res.data.data})
       })
+
+    firebase.auth().onAuthStateChanged((user)=> {
+        if(user) {
+            this.setState({
+                user: user
+              });
+        }else {
+        console.log("no user");
+        }
+    })
+
   }
     render() {
         const responsive = {
@@ -144,57 +157,3 @@ class Home extends Component {
     }   
 }
 export default Home;
-
-// <Row>
-// <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-//        <a className="arrow left"></a>
-//         <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-//         <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-//         <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-//         <a className="arrow right"></a>
-// </Col>
-
-// </Row>
-
-// <Row>
-//                     <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
-//                         <span className="dot_selected"></span>
-//                         <span className="dot"></span>
-//                         <span className="dot"></span>
-//                     </Col>
-//                     <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
-//                         <div> See more promotions</div>
-//                     </Col>
-                    
-//                 </Row>
-
-
-
-// <Col xl={12} style = {{margin:"auto", textAlign:"center"}}>
-// <a className="arrow2 left2"></a>
-// <Topreview bgImage ={topreview1} menu="#brunch #egg" score="4.5" name ="OEB"contents="every meals 20% off until 31. Oct" ></Topreview>
-// <Topreview bgImage ={topreview2} menu="#pasta #benedict" score="4.5" name ="Delphi"contents="every meals 20% off until 31. Oct" ></Topreview>
-// <Topreview bgImage ={topreview3} menu="#lobster #pizza" score="4.5" name ="Stevenston"contents="every meals 20% off until 31. Oct" ></Topreview>
-// <a className="arrow2 right2"></a>
-// </Col>
-
-
-// <Col xl={12} style ={{margin:"auto", textAlign:"center", marginTop:"15px"}}>
-// <span className="dot2_selected"></span>
-// <span className="dot2"></span>
-// <span className="dot2"></span>
-// </Col>
-// <Col xl={12} style ={{margin:"auto", textAlign:"center", marginBottom:"40px"}}>
-// <div> See more promotions</div>
-// </Col>
-
-
-// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal2} name ="Milkcow cafe"contents="every meals 10% off until 3. Nov" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal3} name ="Anh and chi"contents="$10 discount for chicken until 30. Oct" ></Hotdeal>
-// <Hotdeal bgImage = {hotdeal1} name ="Sweet Memory"contents="every meals 20% off until 31. Oct" ></Hotdeal>
